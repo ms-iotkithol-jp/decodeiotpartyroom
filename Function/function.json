@@ -1,0 +1,14 @@
+{
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "myEventHubMessage",
+      "direction": "in",
+      "path": "envout",
+      "connection": "noticeeh",
+      "consumerGroup": "$Default",
+      "cardinality": "many"
+    }
+  ],
+  "disabled": false
+}

@@ -1,0 +1,20 @@
+-- Input:sensor -> Azure IoT IoTHub
+-- Output:storageOut -> Azure Storage Table
+-- Output:ehout -> Azure Event Hubs 'envout'
+
+WITH Sensor AS (
+SELECT
+    IoTHub.ConnectionDeviceId as deviceId,
+     CONCAT(IoTHub.ConnectionDeviceId, CAST(time as nvarchar(max))) as msgId,
+    *
+FROM iotstarterkits TIMESTAMP BY time
+)
+
+SELECT *
+INTO storageOut FROM Sensor
+
+SELECT deviceId, System.Timestamp AS time,
+AVG(pressureTemperature) AS temperature, AVG(humidity) AS humidity
+INTO ehout
+FROM Sensor
+GROUP BY TUMBLINGWINDOW(second,10), deviceId
