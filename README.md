@@ -16,7 +16,7 @@
 - Web Apps - [Implementation](WebAppViewer) 
 - Signal R 
 
-###エッジ側 
+### エッジ側 
 - [Azure IoT Edge SDK](http://github.com/azure/iot-edge)の[拡張](https://github.com/ms-iotkithol-jp/AzureIoTGatewaySDKExtention)を利用 
 
 ## 処理概要 
@@ -45,6 +45,3 @@ Web AppがデプロイされたWebサーバーの、Viewer.htmlをブラウザ�
 7. Viewer.htmlでグラフ表示されます 
 以上です。10秒単位がかったるければ、Send Dataボタンの下のコンボボックスで再生時間を変えてやってみてください。 
 計測した生データは、WpfAppSendDataプロジェクトの[Data/roomenvironment.json](WpfAppSendData/WpfAppSendData/Data/roomenvironment.json)に格納されています。 
-
-
-
