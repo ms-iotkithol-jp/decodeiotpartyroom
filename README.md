@@ -15,6 +15,7 @@
 - Functions - [Implementation](Function) 
 - Web Apps - [Implementation](WebAppViewer) 
 - Signal R 
+※ Stream AnalyticsのEvent Hubへの出力は、JSON、配列を選択すること。
 
 ### エッジ側 
 - [Azure IoT Edge SDK](http://github.com/azure/iot-edge)の[拡張](https://github.com/ms-iotkithol-jp/AzureIoTGatewaySDKExtention)を利用 
